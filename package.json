@@ -1,0 +1,14 @@
+{
+  "name": "rlc2jsn",
+  "version": "1.0.0",
+  "description": "Convert LRC file to JSON format.",
+  "main": "index.js",
+  "author": "dkakashi69",
+  "license": "MIT",
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "devDependencies": {
+    "tap": "^11.0.1"
+  }
+}
