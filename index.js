@@ -32,9 +32,10 @@ function lrc2json(data) {
   
   for (var i = 0, l = lines.length; i < l; i++) {
     const matches = regex.exec(lines[i])
-    if (matches) {
-      const [, start, text] = regex.exec(lines[i])
-      const [, end] = timeRegex.exec(lines[i + 1])
+    const timeEndMatches = timeRegex.exec(lines[i + 1])  
+    if (matches && timeEndMatches) {
+      const [, start, text] = matches
+      const [, end] = timeEndMatches
       scripts.push({
         start,
         text,
