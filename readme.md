@@ -1,7 +1,7 @@
 # lrc2jsn
 
 Convert LRC file into json format
-
+[![Build Status](https://travis-ci.org/dkakashi69/lrc2json.svg?branch=master)](https://travis-ci.org/dkakashi69/lrc2json)
 ## Install
 ```
 $ npm install lrc2jsn
