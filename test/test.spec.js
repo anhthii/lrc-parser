@@ -3,13 +3,12 @@ const { test } = require('tap')
 const lrc2json = require('../')
 
 test('should convert lrc to json', t => {
-  fs.readFile('./test/havana.lrc', 'utf8', function(err, data) {
+  fs.readFile('./test/havana.lrc', function(err, data) {
     if (err) {
       throw err
     }
 
-    const jsonData = lrc2json(data)
-    console.log(jsonData)
+    const jsonData = lrc2json(data.toString('utf8'))
     t.equal(jsonData.ar, 'Camila Cabello, Young Thug')
     t.equal(jsonData.ti, 'Havana')
     t.equal(jsonData.al, 'Havana (Single)')

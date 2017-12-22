@@ -6,7 +6,7 @@
   "author": "dkakashi69",
   "license": "MIT",
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tap test/test.spec.js"
   },
   "devDependencies": {
     "tap": "^11.0.1"

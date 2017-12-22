@@ -7,8 +7,9 @@
  */
 
 function extractInfo(data) {
-  const info = data.slice(1, -1) // remove brackets: length: 03:06
-  return info.split(': ')
+  const regex = /\[(.+)\:\s(.+)\]/
+  const [, key, value] = regex.exec(data)
+  return [key, value]
 }
 
 function lrc2json(data) {
@@ -16,8 +17,9 @@ function lrc2json(data) {
     throw new TypeError('expect first argument to be a string')
   }
 
-  const lines = data.split('\r\n')
+  const lines = data.split('\r')
   const infos = lines.splice(0, 5)
+  console.log(infos)
   const result = {}
 
   infos.reduce((result, info) => {
