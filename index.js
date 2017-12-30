@@ -1,3 +1,4 @@
+const os = require('os')
 
 /**
  * 
@@ -15,8 +16,10 @@ function lrc2json(data) {
   if (typeof data !== 'string') {
     throw new TypeError('expect first argument to be a string')
   }
-
-  const lines = data.split('\r\n')
+  // split a long stirng into lines by system's end-of-line marker line \r\n on Windows
+  // or \n on POSIX
+  const lines = data.split(os.EOL)
+  
   const infos = lines.splice(0, 5)
   const result = {}
 
