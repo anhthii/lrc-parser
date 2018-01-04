@@ -12,7 +12,7 @@ function extractInfo(data) {
   return info.split(': ')
 }
 
-function lrc2json(data) {
+function lrcParser(data) {
   if (typeof data !== 'string') {
     throw new TypeError('expect first argument to be a string')
   }
@@ -74,4 +74,4 @@ function convertTime(string) {
   return seconds
 }
 
-module.exports = lrc2json
+module.exports = lrcParser

@@ -1,22 +1,22 @@
 # lrc2jsn
 
-[![Build Status](https://travis-ci.org/dkakashi69/lrc2json.svg?branch=master)](https://travis-ci.org/dkakashi69/lrc2json)
+[![Build Status](https://travis-ci.org/dkakashi69/lrc-parser.svg?branch=master)](https://travis-ci.org/dkakashi69/lrc-parser)
 
 Convert LRC file into json format, works on both node and browser
 ## Install
 ```
-$ npm install lrc2jsn
+$ npm install lrc-parser
 ```
 
 ## Usage
 
 ### Node
 ```js
-const lrc2json = require('lrc2jsn')
+const lrcParser = require('lrc-parser')
 const fs = require('fs')
 
 fs.readFile('havana.rlc', (err, data) => {
-  rlc2json(data.toString('utf8'))
+  const data = rlcParser(data.toString('utf8'))
 })
 
 ```
@@ -27,7 +27,7 @@ const file = ...
 const fileReader = new FileReader()
 
 fileReader.addEventListener('load', e => {
-  const data = rlc2json(e.target.result)
+  const data = rlcParser(e.target.result)
 })
 
 fileReader.readAsText(file)

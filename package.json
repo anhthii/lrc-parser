@@ -1,6 +1,7 @@
 {
-  "name": "rlc2jsn",
-  "version": "1.0.2",
+  "name": "lrc-parser",
+  "version": "1.0.0",
+  "repository": "dkakashi69/lrc-parser",
   "description": "Convert LRC file into JSON format.",
   "main": "index.js",
   "author": "dkakashi69",
@@ -8,6 +9,10 @@
   "scripts": {
     "test": "tap test/test.spec.js"
   },
+  "keywords": [
+    "lrc",
+    "parsing"
+  ],
   "devDependencies": {
     "tap": "^11.0.1"
   }
