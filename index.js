@@ -1,4 +1,5 @@
-const os = require('os')
+
+const EOL = typeof window === 'undefined' ? require('os').EOL : '\n'
 
 /**
  * 
@@ -18,20 +19,22 @@ function lrc2json(data) {
   }
   // split a long stirng into lines by system's end-of-line marker line \r\n on Windows
   // or \n on POSIX
-  const lines = data.split(os.EOL)
-  
-  const infos = lines.splice(0, 5)
+  const lines = data.split(EOL)
+  const regex = /\[(.+)\](.+)/
+  const timeRegex = /\[(.+)\]/
+  const infos = []
+  const scripts = []
   const result = {}
+
+  for(let i = 0; regex.test(lines[i]) === false; i++) {
+    infos.push(lines[i])
+  }
 
   infos.reduce((result, info) => {
     const [key, value] = extractInfo(info)
     result[key] = value
     return result
   }, result)
-
-  const regex = /\[(.+)\](.+)/
-  const timeRegex = /\[(.+)\]/
-  const scripts = []
   
   for (var i = 0, l = lines.length; i < l; i++) {
     const matches = regex.exec(lines[i])
