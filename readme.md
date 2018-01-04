@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/dkakashi69/lrc2json.svg?branch=master)](https://travis-ci.org/dkakashi69/lrc2json)
 
-Convert LRC file into json format
+Convert LRC file into json format, works on both node and browser
 ## Install
 ```
 $ npm install lrc2jsn
