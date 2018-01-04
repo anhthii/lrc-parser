@@ -12,15 +12,14 @@ test('should convert lrc to json', t => {
     t.equal(jsonData.ar, 'Camila Cabello, Young Thug')
     t.equal(jsonData.ti, 'Havana')
     t.equal(jsonData.al, 'Havana (Single)')
-    t.equal(jsonData.by, 'ZingMp3 Lyric')
     t.equal(jsonData.length, '03:36')
     t.ok(Array.isArray(jsonData.scripts))
 
-    const script = jsonData.scripts[0]
+    const script = jsonData.scripts[2]
     t.ok(typeof script === 'object')
-    t.equal(script.start, '00:00.00')
-    t.equal(script.text, 'Song: Havana')
-    t.equal(script.end, '00:02.00')
+    t.equal(script.start, 8.86)
+    t.equal(script.text, 'Havana ooh na-na (ayy)')
+    t.equal(script.end, 11.56)
     t.end()
   }) 
 })

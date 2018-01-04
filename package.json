@@ -1,6 +1,6 @@
 {
   "name": "rlc2jsn",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Convert LRC file into JSON format.",
   "main": "index.js",
   "author": "dkakashi69",
