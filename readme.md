@@ -9,6 +9,8 @@ $ npm install lrc2jsn
 ```
 
 ## Usage
+
+### Node
 ```js
 const lrc2json = require('lrc2jsn')
 const fs = require('fs')
@@ -17,6 +19,18 @@ fs.readFile('havana.rlc', (err, data) => {
   rlc2json(data.toString('utf8'))
 })
 
+```
+
+### Browser
+```js
+const file = ...
+const fileReader = new FileReader()
+
+fileReader.addEventListener('load', e => {
+  const data = rlc2json(e.target.result)
+})
+
+fileReader.readAsText(file)
 ```
 ```
 havana.lrc
