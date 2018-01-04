@@ -1,8 +1,8 @@
-# lrc2jsn
+# lrc-parser
 
 [![Build Status](https://travis-ci.org/dkakashi69/lrc-parser.svg?branch=master)](https://travis-ci.org/dkakashi69/lrc-parser)
 
-Convert LRC file into json format, works on both node and browser
+Parse LRC file into json format, works on both node and browser
 ## Install
 ```
 $ npm install lrc-parser
