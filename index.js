@@ -43,7 +43,7 @@ function lrc2json(data) {
   const qualified = new RegExp(startAndText.source + '|' + timeEnd.source)
   lines = lines.filter(line => qualified.test(line))
   
-  for (var i = 0, l = lines.length; i < l; i++) {
+  for (let i = 0, l = lines.length; i < l; i++) {
     const matches = startAndText.exec(lines[i])
     const timeEndMatches = timeEnd.exec(lines[i + 1])  
     if (matches && timeEndMatches) {
