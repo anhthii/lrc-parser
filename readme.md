@@ -52,21 +52,27 @@ havana.lrc
 ....
 ```
 ```
-[ { start: 0, text: 'Song: Havana', end: 2 },
-  { start: 2, text: 'Singer: Camila Cabello, Young Thug', end: 4 },
-  { start: 8.86, text: 'Havana ooh na-na (ayy)', end: 11.56 },
-  { start: 11.56,
-    text: 'Half of my heart is in Havana ',
-    end: 14.11 },
-  { start: 14.11, text: 'Ooh-na-na (ayy ayy)', end: 16.03 },
-  { start: 16.03, text: 'He took me back ', end: 17.25 },
-  { start: 17.25, text: 'To East Atlanta na-na-na', end: 19.95 },
-  { start: 20.6,
-    text: 'All of my heart is in Havana (ayy)',
-    end: 23.51 },
-  { start: 23.51,
-    text: 'There\'s somethin\' \'bout his manners ',
-    end: 26.04 },
-  ....
-]
+{
+  ar: 'Camila Cabello, Young Thug',
+  ti: 'Havana',
+  al: 'Havana (Single)',
+  length: '03:36',
+  scripts: [ { start: 0, text: 'Song: Havana', end: 2 },
+    { start: 2, text: 'Singer: Camila Cabello, Young Thug', end: 4 },
+    { start: 8.86, text: 'Havana ooh na-na (ayy)', end: 11.56 },
+    { start: 11.56,
+      text: 'Half of my heart is in Havana ',
+      end: 14.11 },
+    { start: 14.11, text: 'Ooh-na-na (ayy ayy)', end: 16.03 },
+    { start: 16.03, text: 'He took me back ', end: 17.25 },
+    { start: 17.25, text: 'To East Atlanta na-na-na', end: 19.95 },
+    { start: 20.6,
+      text: 'All of my heart is in Havana (ayy)',
+      end: 23.51 },
+    { start: 23.51,
+      text: 'There\'s somethin\' \'bout his manners ',
+      end: 26.04 },
+    ....
+  ]
+}
 ```
