@@ -19,7 +19,7 @@ function lrcParser(data) {
   // split a long stirng into lines by system's end-of-line marker line \r\n on Windows
   // or \n on POSIX
   let lines = data.split(EOL)
-  const timeStart = /\[(.{2}\:.{5})\]/ // i.g [00:10.55]
+  const timeStart = /\[(\d*\:\d*\.?\d*)\]/ // i.g [00:10.55]
   const scriptText = /(.+)/ // Havana ooh na-na (ayy) 
   const timeEnd = timeStart
   const startAndText = new RegExp(timeStart.source + scriptText.source)
