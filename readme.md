@@ -15,8 +15,8 @@ $ npm install lrc-parser
 const lrcParser = require('lrc-parser')
 const fs = require('fs')
 
-fs.readFile('havana.rlc', (err, data) => {
-  const data = rlcParser(data.toString('utf8'))
+fs.readFile('havana.lrc', (err, data) => {
+  const data = lrcParser(data.toString('utf8'))
 })
 
 ```
@@ -27,7 +27,7 @@ const file = ...
 const fileReader = new FileReader()
 
 fileReader.addEventListener('load', e => {
-  const data = rlcParser(e.target.result)
+  const data = lrcParser(e.target.result)
 })
 
 fileReader.readAsText(file)
