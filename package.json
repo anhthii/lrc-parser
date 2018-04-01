@@ -1,6 +1,6 @@
 {
   "name": "lrc-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "dkakashi69/lrc-parser",
   "description": "Convert LRC file into JSON format.",
   "main": "index.js",
